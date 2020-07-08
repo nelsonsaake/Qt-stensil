@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>866</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>STENSIL</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="r.qrc">
+    <normaloff>:/img/stensil (2).png</normaloff>:/img/stensil (2).png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QScrollBar:vertical{
+	width: 9px; 
+}
+
+QScrollBar:horizontal{
+	height: 9px; 
+}
+
+QScrollBar:horizontal,
+QScrollBar:vertical{
+	background: rgba(250,250,250,0.5);
+}
+
+QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:horizontal,
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:vertical{
+	background: none;
+}
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal{
+	background: rgba(70,65,65,1);
+	border-radius: 2px;
+	margin: 2px;
+}
+
+QWidget{
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+QPushButton{
+	
+	text-align: left;
+	padding: 0;
+	padding-left: 15px;
+	background: rgba(0,0,0,0);
+	margin-top: 2px;
+	margin-bottom: 2px;
+	border: 0;
+	height: 25px; 
+}
+
+[objectName = &quot;toc_widget&quot;] QLabel, 
+[objectName = &quot;tom_widget&quot;] QLabel{
+	
+	font-weight: bold;
+	height: 100px;
+	padding-left: 5px;
+}
+
+[objectName = &quot;toc_widget&quot;] QPushButton{
+	
+	color: blue;
+}
+
+[objectName = &quot;tom_widget&quot;]{
+	
+	background-color: rgba(200, 62, 52, 1);
+	border: 1px solid gray;
+	min-width: 250px;
+}
+
+[objectName = &quot;tom_widget&quot;] QPushButton{
+	
+	color: white;
+	font: italic 12pt &quot;Monotype Corsiva&quot;;
+}
+
+[objectName = &quot;tom_widget&quot;] QPushButton:hover{
+	
+	background-color: rgba(255,255,255,0.3);
+	font-size: 13pt;
+}
+
+
+[objectName = &quot;solve_pushButton&quot;]{
+	
+	border: 1px solid gray;
+	color: red;
+	padding: 2px 15px;
+	border-radius: 2px;
+}
+
+[objectName = &quot;tom_widget&quot;] QLabel{
+	
+	color: white;
+	/*font: 20pt &quot;Mistral&quot;;*/
+}
+
+[objectName = &quot;centralwidget&quot;]{
+
+	background: url(:/img/bg/andres-jasso-RQqhVKHXa-k-unsplash.jpg);
+	background-position:  bottom right;
+}
+
+QStatusBar{
+	
+	border-top: 2px solid gray;
+	min-height: 30px;
+}
+
+Line{
+	background-color: gray;
+}
+
+QLineEdit{
+	
+	border: 1px solid silver;
+	border-radius: 2px;
+	margin: 2px;
+	padding-left: 5px;
+	max-width: 100px;
+	min-width: 70px;
+	min-height: 25px;
+}
+
+QLineEdit:hover{
+	
+	border-color: gray;
+	padding-left: 2px;
+}
+
+QScrollArea{
+	
+	background-color: rgba(240, 240, 240, 1);
+	border: 2px solid gray;
+	border-top: 0;
+	border-bottom: 0;
+	border: 0;
+	width: 60%;
+}
+
+Line{
+	
+	background-color: rgba(0,0,0,0);
+	border-right: 2px solid gray;
+}
+
+[objectName = &quot;tom_widget&quot;]{
+	
+	border-top: 0;
+	border-bottom: 0;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="welcome_page">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QWidget" name="welcome_page_app_label_wrapper" native="true">
+          <property name="styleSheet">
+           <string notr="true">[objectName = &quot;welcome_page_app_label_wrapper&quot;]{
+
+background: white;
+}</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="welcome_page_app_label">
+             <property name="styleSheet">
+              <string notr="true">background-color: white;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="r.qrc">:/img/stensil (3).png</pixmap>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QWidget" name="tom_widget" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="directMethods_label">
+                <property name="styleSheet">
+                 <string notr="true">font: 20pt &quot;Mistral&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>DIRECT METHODS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="guassianElimination_pushButton">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>Guassian's Elimination</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="gaussJordan_pushButton">
+                <property name="text">
+                 <string>Gauss Jordan Elimination</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="lu_pushButton">
+                <property name="text">
+                 <string>LU Decomposition</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="Line" name="line_2">
+                <property name="styleSheet">
+                 <string notr="true">border-top: 1px solid white;
+background-color: rgba(0,0,0,0);</string>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="iterativeMethods_label">
+                <property name="styleSheet">
+                 <string notr="true">font: 20pt &quot;Mistral&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>ITERATIVE METHODS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="jacobi_pushButton">
+                <property name="text">
+                 <string>Jacobi</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="gaussSeidal_pushButton">
+                <property name="text">
+                 <string>Gauss Seidal</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="sor_pushButton">
+                <property name="text">
+                 <string>Successive Over Relaxation</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="main_page">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QWidget" name="main_page_labelArea_widget" native="true">
+          <property name="styleSheet">
+           <string notr="true">/*[objectName=&quot;main_page_labelArea_widget&quot;]{
+
+	background-color: rgba(255,255,255,0.95);
+	border: 1px solid silver;
+	border-radius: 2px;
+}*/</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="styleSheet">
+              <string notr="true">
+QPushButton{
+
+padding: 5;
+border: 1px solid gray;
+width: 30px;
+max-width: 30px;
+height: 30px;
+border-radius: 21px;
+background-color: rgba(255,255,255,1);
+}
+
+QPushButton:hover{
+
+border-width: 2px;
+}
+
+QPushButton:pressed{
+
+width: 26px;
+max-width: 26px;
+height: 26px;
+border-radius: 16px;
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="r.qrc">
+               <normaloff>:/img/svg/long-arrow-alt-left.svg</normaloff>:/img/svg/long-arrow-alt-left.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>21</width>
+               <height>50</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="app_label">
+             <property name="styleSheet">
+              <string notr="true">font: 25pt &quot;Quicksand&quot;;
+color: rgb(200, 62, 52);
+text-align: center;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Jacobi's Method&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_3" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QScrollArea" name="scrollArea">
+             <property name="minimumSize">
+              <size>
+               <width>722</width>
+               <height>500</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+[objectName=&quot;scrollArea&quot;]{
+background-color: white;
+border-radius: 2px;
+border: 1px solid silver;
+min-width: 720px;
+}
+
+QWidget{
+
+}</string>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>720</width>
+                <height>498</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <spacer name="horizontalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QWidget" name="input_widget" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="input_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 25pt &quot;Quicksand&quot;;
+color: rgb(200, 62, 52);</string>
+                    </property>
+                    <property name="text">
+                     <string>Input</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="input_verticalLayout">
+                    <item>
+                     <widget class="QWidget" name="widget" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_3">
+                       <item alignment="Qt::AlignLeft">
+                        <widget class="QLabel" name="n_label">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 14pt &quot;Comic Sans MS&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>n = </string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item alignment="Qt::AlignLeft">
+                        <widget class="QLineEdit" name="n_lineEdit"/>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line_3">
+                    <property name="styleSheet">
+                     <string notr="true">border: 0;
+border-top: 1px solid silver;
+background-color: rgba(0,0,0,0);
+</string>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignHCenter">
+                   <widget class="QPushButton" name="solve_pushButton">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	
+	color: rgb(20, 34, 34);
+	color: white;
+	font: 12pt &quot;Quicksand&quot;;
+	font: 75 14pt &quot;Comic Sans MS&quot;;
+	border-radius: 5px;
+	border-color: rgb(200, 62, 52);
+	border-color: rgb(20, 34, 34);
+	background-color: rgba(200,62,52,0.9);
+}
+
+QPushButton:hover{
+	
+	border-radius: 5px;
+	border-width: 2px;
+}
+
+QPushButton:pressed{
+	
+	font-size: 10px;
+	text-align: center;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Solve</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="Line" name="line">
+                 <property name="styleSheet">
+                  <string notr="true">border: 0;
+background: rgba(0,0,0,0);
+border-left: 1px solid gray;</string>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QWidget" name="output_widget" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="output_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 25pt &quot;Quicksand&quot;;
+color: rgb(200, 62, 52);</string>
+                    </property>
+                    <property name="text">
+                     <string>Output</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="output_verticalLayout"/>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::MinimumExpanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>38</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="r.qrc"/>
+ </resources>
+ <connections/>
+</ui>

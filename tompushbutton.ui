@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TomPushButton</class>
+ <widget class="QWidget" name="TomPushButton">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>503</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>503</width>
+    <height>150</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>503</width>
+    <height>150</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+/*
+TOM PushButton
+TOM = Table of Methods
+*/
+
+[objectName = &quot;TomPushButton&quot;] {
+	
+	background: white;
+	
+}
+
+[objectName = &quot;logo_label&quot;] {
+	
+	min-width: 70px;
+	min-height: 70px;
+	max-width: 70px;
+	max-height: 70px;
+	border-radius: 35px;
+	border: 1px solid rgb(49,18,22);
+	text-align: center;
+	color: white;
+	background-color: rgba(49,18,22,0.8);
+	font-size: 20pt;
+	font-family: &quot;Kunstler Script&quot;;
+}
+
+[objectName = &quot;methodName_label&quot;] {
+	
+	font-size: 24pt;
+	font-family: &quot;Gabriola&quot;;
+	color: rgb(49, 18, 22);
+}
+
+[objectName = &quot;methodDescription_label&quot;]{
+	
+	
+}
+
+[objectName = &quot;widget&quot;]{
+	
+	background-color: white;
+	border: 1px solid silver;
+	border-radius: 15px;
+}
+
+[objectName = &quot;widget&quot;]:hover {
+	
+	border-color: rgb(49,18,22);
+	border-width: 2px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>485</width>
+       <height>132</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>485</width>
+       <height>132</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="logo_label">
+          <property name="text">
+           <string>Jacobi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="methodName_label">
+             <property name="text">
+              <string>Jacobi</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="methodDescription_label">
+             <property name="text">
+              <string>Jacobi method is an iterative algorithm for determining the solution of a strictly diagonally dominant system of linear equations.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/bkg.png</file>
+        <file>img/buttons/jacobi.png</file>
+        <file>img/stensil (2).png</file>
+        <file>img/stensil (3).png</file>
+        <file>img/stensil.png</file>
+        <file>img/svg/long-arrow-alt-left.svg</file>
+        <file>img/bg/dresden-5347387_1920.jpg</file>
+        <file>img/bg/gorch-fock-1958-finish-piece.jpg</file>
+        <file>img/bg/white-boat-on-body-of-water-945460.jpg</file>
+        <file>img/bg/andres-jasso-RQqhVKHXa-k-unsplash.jpg</file>
+        <file>img/bg/max-andrey-AS-LPlfzWKs-unsplash.jpg</file>
+        <file>img/bg/omid-armin-pnxMDGBj6Jw-unsplash.jpg</file>
+    </qresource>
+</RCC>
